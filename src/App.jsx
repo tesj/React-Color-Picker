@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import NumberInput from './components/numInput'
-import Slider from './components/slider'
+import NumberInput from './components/NumInput'
+import Slider from './components/Slider'
 
 
 
