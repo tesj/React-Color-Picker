@@ -18,13 +18,14 @@ function Slider({
                 onChange= { e => 
                     onChange(e.target.value)
                 }
-                style = {{"--thumb-color": color ?? "rgb(255,255,255)"}}
+                style = {{"--thumb-color": color ?? "rgb(255,255,255)"}} //set the color to specified color or to white
             />
         </div>
         )
     
 }
 
+//specify the prop(erty) types for Slider
 Slider.propTypes = {
     value: PropTypes.number.isRequired,
     onChange: PropTypes.func,

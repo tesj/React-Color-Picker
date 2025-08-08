@@ -21,18 +21,19 @@ function NumberInput({
             step={stepValue} 
             placeholder={placeholderValue} 
             value={value} 
-            onChange={e => {
+            onChange={e => { //lambda for onChange event
                 value = Number(e.target.value)
-                if(validation(value)) {
+                if(validation(value)) { //if the value is valid, update the value prop
                     onChange(Number(value))
-                    e.target.value = String(value)
+                    e.target.value = (value) //set the text to match the prop value
                 }
             }}
-            style={{width:"300px"}}></input>
+            style={{width:"300px"}} />
         </div>
     )
 }
 
+//specify the prop(erty) types for the component function
 NumberInput.propTypes = {
     value: PropTypes.number.isRequired,
     onChange: PropTypes.func.isRequired,

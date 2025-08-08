@@ -6,21 +6,25 @@ import Slider from './components/slider'
 
 
 function App() {
+  //RGB states (variables which are observed; UI updates if state changes)
   const [red, setRed] = useState(0)
   const [green, setGreen] = useState(0)
   const [blue, setBlue] = useState(0)
+
+  //validate the RGB value
   function validateValue(value) {
     return value >= 0 && value <= 255;
   }
   
 
+  //return the React component
   return (
     
     <div style = {{ width: "100%", height: "600px", padding: "30px", display: "flex", flexDirection: "row",
       gap: "50px", justifySelf: "center", justifyContent: "center", alignContent: "center"}}>
       
       <div style={{width: "300px", height: "min-content", alignSelf: "center", display: "flex", flexDirection: "column", gap: "20px", background: "grey", borderRadius: "70px", padding: "30px"}}>
-       
+        {/*use the NumberInput and Slider components*/}
         <NumberInput
           value={red}
           onChange={setRed}
@@ -63,6 +67,7 @@ function App() {
         />
       </div>
       
+      {/*Create a circle which has the color of the RGB values selected*/}
       <div style={{backgroundColor: `rgb(${red}, ${green}, ${blue})`, width: "200px", height: "200px", borderRadius: "50%", alignSelf: "center"}}/>
 
     </div>
