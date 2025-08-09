@@ -28,7 +28,7 @@ function NumberInput({
                     e.target.value = (value) //set the text to match the prop value
                 }
             }}
-            style={{width:"300px"}} />
+            className="textbox" />
         </div>
     )
 }
